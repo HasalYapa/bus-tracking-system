@@ -94,8 +94,8 @@ export default function MapLayer({ buses, userLocation, onStartGhostRide }: MapL
                     </Popup>
                 </Marker>
             ))}
-            {/* Dev Mode: Ghost Ride Button */}
-            {process.env.NODE_ENV === 'development' && onStartGhostRide && (
+            {/* Dev Mode: Ghost Ride Button - Enabled in Prod for Demo */}
+            {onStartGhostRide && (
                 <div className="leaflet-top leaflet-right" style={{ pointerEvents: 'auto', zIndex: 1000 }}>
                     <div className="leaflet-control leaflet-bar">
                         <button
